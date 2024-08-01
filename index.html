@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congreso - GPT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Congreso-GPT</h1>
+    </header>
+
+    <div class="container">
+        <div class="description">
+            <p>Congreso-GPT es una pagina web que busca educar a todos los peruanos en los factores básicos para la creación de una ley, acorde al sistema legislativo peruano, apoyandose del modelo de inteligencia artificial generativa de Google "GEMINI AI". </br></br>Posdata: Los documentos generados NO tiene valor legislativo, solo valor educacional.</p>
+        </div>
+
+        <form id="congresoForm" action="https://docs.google.com/forms/d/e/1FAIpQLSc_O_UC-jOF4mggJAykyTWXNXJyhdRl1POToSopJ470kU1fqQ/formResponse" method="post">
+            <div class="box">
+                <label for="entry.809805794">Nombre:</label>
+                <input type="text" id="entry.809805794" name="entry.809805794" required>
+
+                <label for="entry.1890551147">Partido Político:</label>
+                <input type="text" id="entry.1890551147" name="entry.1890551147" required>
+            </div>
+
+            <div class="box">
+                <label for="role">Seleccione su rol:</label>
+                <select id="role" name="entry.673700364" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Congresista">Congresista</option>
+                    <option value="Ciudadano Responsable">Ciudadano Responsable</option>
+                </select>
+
+                <div id="citizenFields" class="hidden">
+                    <label for="entry.680860872">¿Cuál es el objetivo principal de la legislación y qué problema específico busca resolver?</label>
+                    <input type="text" id="entry.680860872" name="entry.680860872" placeholder="Define claramente el propósito de la ley y el problema que aborda.">
+
+                    <label for="entry.651523753">¿Quiénes serán los beneficiarios directos e indirectos y cómo se verán afectados?</label>
+                    <input type="text" id="entry.651523753" name="entry.651523753" placeholder="Identifica a los grupos que se beneficiarán y describe el impacto esperado en ellos.">
+
+                    <label for="entry.1283210783">¿Cuál es el costo de implementación de la legislación y cómo se financiará?</label>
+                    <input type="text" id="entry.1283210783" name="entry.1283210783" placeholder="Estima los recursos necesarios para poner en práctica la ley y su fuente de financiamiento.">
+
+                    <label for="entry.1280257413">¿Es la legislación constitucional y respeta los derechos fundamentales?</label>
+                    <input type="text" id="entry.1280257413" name="entry.1280257413" placeholder="Asegúrate de que la ley esté alineada con la Constitución y no viole derechos fundamentales.">
+
+                    <label for="entry.1883056177">¿Qué mecanismos de implementación y supervisión se han establecido?</label>
+                    <input type="text" id="entry.1883056177" name="entry.1883056177" placeholder="Define cómo se llevará a cabo la ley, quiénes serán responsables de su ejecución y cómo se evaluará su cumplimiento">
+                </div>
+
+                <div id="deseoField" class="hidden">
+                    <label for="entry.1929993820">PIDE UN DESEO:</label>
+                    <input type="text" id="entry.1929993820" name="entry.1929993820" placeholder="Exprese su deseo para una nueva ley">
+                </div>
+
+                <button type="submit">Enviar Formulario</button>
+            </div>
+        </form>
+
+        <div class="box">
+            <h2>Leyes Aprobadas</h2>
+            <ul id="approvedLaws">
+                <!-- This list will be populated dynamically -->
+                <li>Ley ejemplo 1 <a href="#">Descargar PDF</a></li>
+                <li>Ley ejemplo 2 <a href="#">Descargar PDF</a></li>
+                <li>Ley ejemplo 3 <a href="#">Descargar PDF</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
